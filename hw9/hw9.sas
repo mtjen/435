@@ -44,6 +44,7 @@ DATA haz_vals;
 	SET temp;
 	beta = -value / 1.2839;
 	haz_ratio = exp(beta);
+ 	/* incorrect formula, ok for hazard ratio but use delta method for 95% CI */
 RUN;
 
 ods pdf file="/home/u63563888/435/homework9/hr_calc_data.pdf";
